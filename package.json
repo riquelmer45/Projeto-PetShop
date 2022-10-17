@@ -2,7 +2,25 @@
   "dependencies": {
     "express": "^4.18.2",
     "express-handlebars": "^6.0.6",
-    "handlebars": "^4.7.7",
-    "sequelize": "^6.25.1"
-  }
+    "sequelize": "^6.25.1",
+    "mysql2": "^2.3.3"
+  },
+  "name": "projeto-petshop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riquelmer45/Projeto-PetShop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riquelmer45/Projeto-PetShop/issues"
+  },
+  "homepage": "https://github.com/riquelmer45/Projeto-PetShop#readme",
+  "description": ""
 }
