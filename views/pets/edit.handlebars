@@ -1,0 +1,53 @@
+<h1>Editar dados {{pet.nome}}</h1>
+
+<div class="back_view">
+  <form action="/pets/edit" method="post" class="row m-3">
+
+    <div class="row align-items-start">
+      <input type="hidden" name="id" value="{{pet.id}}" />
+      <div class="col-md-6">
+        <label for="nome" class="form-label">Nome:</label>
+        <input type="text" name="nome" value="{{pet.nome}}" class="form-control" />
+      </div>
+
+    </div>
+
+    <div class="row align-items-start">
+      <div class="col-md-4">
+        <label for="especie" class="form-label">Especie:</label>
+        <input type="text" name="especie" value="{{pet.especie}}" class="form-control" />
+      </div>
+    </div>
+
+    <div class="row align-items-start">
+      <div class="col-md-4">
+        <label for="raça" class="form-label">Raça:</label>
+        <input type="text" name="raça" value="{{pet.raça}}" class="form-control" />
+      </div>
+    </div>
+    
+    <div class="row align-items-start">
+      <div class="col-md-4">
+        <label for="nascimento" class="form-label">Nascimento:</label>
+        <input type="text" name="nascimento" value="{{pet.nascimento}}" class="form-control" />
+      </div>
+    </div>
+
+    <div class="row align-items-start">
+      <div class="col-md-4">
+        <label for="cor" class="form-label">Cor:</label>
+        <input type="text" name="cor" value="{{pet.cor}}" class="form-control" />
+      </div>
+    </div>
+
+    <div class="row align-items-start">
+      <div class="col-md-4">
+        <label for="peso" class="form-label">Peso:</label>
+        <input type="text" name="peso" value="{{pet.peso}}" class="form-control" />
+      </div>
+    </div>
+
+  
+    <div class="col-sm-2">
+      <input type="submit" value="Atualizar" />
+    </div>

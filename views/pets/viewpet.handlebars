@@ -1,0 +1,47 @@
+<h1 class="text-center">Todos os Pets</h1>
+<hr />
+
+
+<ul class="user_list list-group container">
+  {{#each pets}}
+
+    <li class="list-group-item text-center">
+      <div class="col-md-3">
+        <label for="">{{this.nome}}</label>
+      </div>
+      <div class="col-md-3 text-center">
+        <label for="">{{this.modelo}}</label>
+      </div>
+      <div class="col-md-4 actions justify-content-end">
+        <a href="/pets/edit/{{this.id}}">
+          {{> edit_pet}}
+        </a>
+        <form action="/pets/remove" method="post">
+          <input type="hidden" name="id" value="{{this.id}}">
+          <button type="submit">
+            {{> del_pet}}
+          </button>
+        </form>
+      </div>
+
+
+
+  {{/each}}
+</ul>
+
+   <div class="central container">
+    <div class="d-flex justify-content-end">
+      <div>
+        <form action="/pets/add" method="get">
+          <button type="submit" class="btn btn-primary mx-2">Cadastrar um novo Pet</button>
+        </form>
+      </div>
+      <div>
+        <form action="/pets" method="get">
+          <button type="submit" class="btn btn-primary">Home</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
