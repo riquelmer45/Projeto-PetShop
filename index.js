@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 4000
 const exphbs = require('express-handlebars')
+const petshop = require('./routes/router')
 const Pet = require('./routes/petRouter')
 const Cliente = require('./routes/clienteRouter')
 const conn = require('./db/conn')
@@ -28,9 +29,16 @@ app.use(express.json())
 app.use(express.static('public'))
 
 //adicionando rota Pets
+app.use('/petshop', petshop )
 app.use('/pets', Pet)
 //adicionando rota Cliente
 app.use('/cliente', Cliente)
+
+app.get('/', (req, res) => {
+  res.render('petshop/home')
+})
+
+
 
 conn
   .sync()
