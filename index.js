@@ -3,9 +3,10 @@ const app = express()
 const port = 4000
 const exphbs = require('express-handlebars')
 const Pet = require('./routes/petRouter')
+const Cliente = require('./routes/clienteRouter')
 const conn = require('./db/conn')
 const petModel = require('./model/Pets')
-
+const clienteModel = require('./model/Cliente')
 
 const hbs = exphbs.create({
   partialsDir: ["views/partials"]
@@ -14,7 +15,6 @@ const hbs = exphbs.create({
 //configure template handlebars
 app.engine('handlebars', hbs.engine)
 app.set('view engine', 'handlebars')
-
 
 //parser para leitura do body
 app.use(
@@ -27,12 +27,10 @@ app.use(express.json())
 //adicionando CSS
 app.use(express.static('public'))
 
-
-
 //adicionando rota Pets
 app.use('/pets', Pet)
-
-
+//adicionando rota Cliente
+app.use('/cliente', Cliente)
 
 conn
   .sync()
