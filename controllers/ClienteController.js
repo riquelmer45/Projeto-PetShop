@@ -4,7 +4,7 @@ const Cliente= require('../model/Cliente')
 module.exports = class ClienteController {
 
   static newCliente(req, res) {
-    res.render('cliente/clienteform')
+    res.render('clientes/clienteform')
   }
 
   static async newClienteSave(req, res) {

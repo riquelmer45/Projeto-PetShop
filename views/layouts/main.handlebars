@@ -30,11 +30,14 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Cadastrar Cliente</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Cadastrar Pets</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Clientes
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/cliente/add">Cadastrar Cliente</a></li>
+                                <li><a class="dropdown-item" href="/cliente/allCliente">Listar Clientes</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,7 +47,7 @@
                                 <li><a class="dropdown-item" href="/pets/add">Cadastrar Pet</a></li>
                                 <li><a class="dropdown-item" href="/pets/allPets">Listar Pets</a></li>
                             </ul>
-                        </li>  
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Funcionario
