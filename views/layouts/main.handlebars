@@ -15,6 +15,56 @@
 
   </head>
 <body>
+  <div class="navbar-container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img class="img_icon" src="" alt="" width="30cm" height="30cm">
+                <a class="navbar-brand" href="#">PetShop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Cadastrar Cliente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Cadastrar Pets</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Pets
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/pets/add">Cadastrar Pet</a></li>
+                                <li><a class="dropdown-item" href="/pets/allPets">Listar Pets</a></li>
+                            </ul>
+                        </li>  
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Funcionario
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/funcionarios/add">Novo Funcionario</a></li>
+                                <li><a class="dropdown-item" href="#">Listar Funcionarios</a></li>
+                            </ul>
+                        </li>    
+                        {{!-- <li class="nav-item">
+                            <a class="nav-link" href="/funcionarios/addFun">Cadastrar Funcionarios</a>
+                        </li> --}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Lista de Serviços</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
   <div class="main_body">
     {{{body}}}
   </div>

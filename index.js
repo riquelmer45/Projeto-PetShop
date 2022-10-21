@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 4000
 const exphbs = require('express-handlebars')
+const petshop = require('./routes/router')
 const Pet = require('./routes/petRouter')
 const conn = require('./db/conn')
 const petModel = require('./model/Pets')
@@ -30,7 +31,12 @@ app.use(express.static('public'))
 
 
 //adicionando rota Pets
+app.use('/petshop', petshop )
 app.use('/pets', Pet)
+
+app.get('/', (req, res) => {
+  res.render('petshop/home')
+})
 
 
 
