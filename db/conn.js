@@ -1,6 +1,12 @@
 const { Sequelize } = require('sequelize')
+require('dotenv').config()
 
-const sequelize = new Sequelize('petshop', 'root', 'admin', {
+DATABASE = process.env.BD_NAME
+ROOT = process.env.BD_ROOT
+PASS = process.env.BD_PASS
+
+
+const sequelize = new Sequelize(DATABASE, ROOT, PASS, {
   host: 'localhost',
   dialect: 'mysql',
 })
