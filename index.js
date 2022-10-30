@@ -25,11 +25,11 @@ app.use(
 )
 app.use(express.json())
 
-//adicionando CSS
+
 app.use(express.static('public'))
 
 //adicionando rota Pets
-app.use('/petshop', petshop )
+app.use('/petshop', petshop)
 app.use('/pets', Pet)
 //adicionando rota Cliente
 app.use('/cliente', Cliente)

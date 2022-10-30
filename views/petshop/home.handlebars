@@ -1,10 +1,513 @@
-<h2>{{message}}</h2>
-<div class="central">
-  <div class="text-center">
-    
+<!-- ADICIONAIS PRO CARROSSEL DE SERVIÇOS FUNCIONAR-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- FIM DOS ADICIONAIS -->
 
+<!---->
+<div id="slides">
+  <div id="carouselExampleIndicators" class="carousel slide carrossel-anuncio" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="imgs/esquenta.png" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="imgs/promo.png" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="imgs/racao.png" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Próximo</span>
+    </a>
   </div>
-
-  
+  <div>
+  </div>
 </div>
 
+<!-- NOSSOS MEDICOS -->
+
+<!-- Team -->
+<section id="team" class="pb-5">
+  <div class="container">
+    <h2 class="linhaum section-title h2">NOSSOS PROFISSIONAIS</h2>
+    <div class="row">
+      <!-- Team member -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="image-flip">
+          <div class="mainflip flip-0">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p><img class=" img-fluid" src="./imgs/drmedicogato.jpg" alt="DR gato">
+                  </p>
+                  <h4 class="card-title">Dr. Gatito Gatão</h4>
+                  <p class="card-text">Médico clínico responsável pela triagem e atendimento nutricional.</p>
+                  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <h4 class="card-title">Dr. Gatito Gatão</h4>
+                  <p class="card-text">Graduado em Bacharel em Medicina Veterinária pela Universidade Federal
+                    de Miau Miau, com Especialização em Nutrição pet. Possui atendimento humanizado e adaptado às
+                    necessidades de cada animal que é atendido.</p>
+                  <ul class="list-inline">
+                    <li class="list-inline-item">
+                      <a class="social-icon text-xs-center" target="_blank" href="#">
+                        <i class="fa fa-facebook"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="social-icon text-xs-center" target="_blank" href="#">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="social-icon text-xs-center" target="_blank" href="#">
+                        <i class="fa fa-skype"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="social-icon text-xs-center" target="_blank" href="#">
+                        <i class="fa fa-google"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./Team member -->
+      <!-- Team member -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p><img class=" img-fluid" src="./imgs/drcachorro.jpg" alt="card image">
+                  </p>
+                  <h4 class="card-title">Dr. Bolota</h4>
+                  <p class="card-text">Médico Veterinário responsável pelo atendimento psicológico e psicoterapico.</p>
+                  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <h4 class="card-title">Dr. Bolota</h4>
+                  <p class="card-text">Formado em Psicologia Animal pela Faculdade Auau, com especialização em
+                    Psicologia Canina
+                    e Pós-Graduação em Psicologia Gatuna. Atuando na área desde 2018, com atendimentos naturais,
+                    humanizados e
+                    de altíssima demanda.
+                  </p>
+                  <ul class="list-inline">
+                    <li class="list-inline-item">
+                      <a class="social-icon text-xs-center" target="_blank" href="#">
+                        <i class="fa fa-facebook"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="social-icon text-xs-center" target="_blank" href="#">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="social-icon text-xs-center" target="_blank" href="#">
+                        <i class="fa fa-skype"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="social-icon text-xs-center" target="_blank" href="#">
+                        <i class="fa fa-google"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./Team member -->
+      <!-- Team member -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p><img class=" img-fluid" src="./imgs/drgatao.jpg" alt="card image">
+                  </p>
+                  <h4 class="card-title">Dr.Patinhas de Algodão</h4>
+                  <p class="card-text">Médico clínico responsável pelo atendimento clínico e cirurgias.</p>
+                  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <h4 class="card-title">Dr. Patinhas de Algodão</h4>
+                  <p class="card-text">Graduado em Bacharel em Medicina Veterinária pela Universidade Federal
+                    de Miau Miau, com Especialização em Neurologia e Castração. Coordenador do Projeto
+                    Gatinhos para a Vida Toda desde 2020. Atuando na área desde 2019.
+                  </p>
+                  <ul class="list-inline">
+                    <li class="list-inline-item">
+                      <a class="social-icon text-xs-center" target="_blank" href="#">
+                        <i class="fa fa-facebook"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="social-icon text-xs-center" target="_blank" href="#">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="social-icon text-xs-center" target="_blank" href="#">
+                        <i class="fa fa-skype"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="social-icon text-xs-center" target="_blank" href="#">
+                        <i class="fa fa-google"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Team -->
+
+<!-- CARDS COM PRODUTOS-->
+<div class="produtos espaco">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="linhadois text-center text-white">Nossos Serviços</h2>
+      <div id="myCarousel" class="horizontal carousel slide espaco-margin" data-ride="carousel" data-interval="0">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators espaco-margin">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+          <div class="item carousel-item active">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="./imgs/tosa.jpeg" class="img-fluid" alt="Tosa">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Tosa</h4>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                    <p class="item-price"><strike>R$70.00</strike> <b>R$50.00</b></p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="./imgs/banhocao.jpg" class="img-fluid" alt="Banho para cão grande">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Banho - Raça grande</h4>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                    <p class="item-price"><strike>R$100.00</strike> <b>R$80.00</b></p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src=".\imgs\racamediabanho.jpg" class="img-fluid" alt="Banho para cão médio">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Banho - Raça Média</h4>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                      </ul>
+                    </div>
+                    <p class="item-price"><strike>R$90.00</strike> <b>R$60.00</b></p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src=".\imgs\banhocaopequeno.jpg" class="img-fluid" alt="Banho para cão pequeno">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Banho - Raça Pqn</h4>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                    <p class="item-price"><strike>R$80.00</strike> <b>R$50.00</b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="./imgs/vacinas.jpg" class="img-fluid" alt="Vacina">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Vacina para raiva</h4>
+                    <p class="item-price"><strike>R$80.00</strike> <span>R$60.00</span></p>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="./imgs/nutricionista.png" class="img-fluid" alt="Nutricionista">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Nutricionista Pet</h4>
+                    <p class="item-price"><strike>R$450.00</strike> <span>R$350.00</span></p>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="./imgs/castracao.jpeg" class="img-fluid" alt="Psicologa">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Psicóloga Pet</h4>
+                    <p class="item-price"><strike>R$350.00</strike> <span>R$250.00</span></p>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="./imgs/vermifugo.jpg" class="img-fluid" alt="Vermifugo">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Vermífugo</h4>
+                    <p class="item-price"><strike>R$40.00</strike> <span>R$20.00</span></p>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="./imgs/banhogato.jpg" class="img-fluid" alt="Banho em Gato">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Banho - Gato</h4>
+                    <p class="item-price"><strike>R$50.00</strike> <span>R$40.00</span></p>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="./imgs/treinocao.jpg" class="img-fluid" alt="Adestrar - Cão">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Adestrar - Cão</h4>
+                    <p class="item-price"><strike>R$1500.00</strike> <span>R$1000.00</span></p>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="./imgs/treinogato.jpg" class="img-fluid" alt="Adestrar - Gato">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Adestrar - Gato</h4>
+                    <p class="item-price"><strike>R$1100.00</strike> <span>R$900.00</span></p>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="./imgs/pethotel.jpg" class="img-fluid" alt="Pet Hotel">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Pet Hotel - Diária</h4>
+                    <p class="item-price"><strike>R$100.00</strike> <span>R$90.00</span></p>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+          <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $(".wish-icon i").click(function () {
+      $(this).toggleClass("fa-heart fa-heart-o");
+    });
+  });	
+</script>
