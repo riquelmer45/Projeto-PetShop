@@ -1,4 +1,6 @@
-<h1>Editar dados {{pet.nome}}</h1>
+<div class=" text-center header">
+  <h1 class="text-center header-text">Editar Dados - Pet {{pet.nome}}</h1>
+</div>
 
 <div class="back_view">
   <form action="/pets/edit" method="post" class="row m-3">
@@ -25,7 +27,7 @@
         <input type="text" name="raça" value="{{pet.raça}}" class="form-control" />
       </div>
     </div>
-    
+
     <div class="row align-items-start">
       <div class="col-md-4">
         <label for="nascimento" class="form-label">Nascimento:</label>
@@ -47,7 +49,7 @@
       </div>
     </div>
 
-  
+
     <div class="col-sm-2">
       <input type="submit" value="Atualizar" />
     </div>

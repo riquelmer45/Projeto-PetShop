@@ -352,6 +352,182 @@ body {
 
 /* FINAL DO CARROSSEL DE IMAGEM */
 
+/* header */
+
+.header {
+    background-color: #4E2097 !important;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.header-text {
+    color: white !important;
+    font-family: 'Baloo' !important;
+}
+
+/* fim do header */
+
+/* form */
+
+label {
+    color: #4E2097 !important;
+    font-family: 'Baloo' !important;
+}
+
+.btn-cadastro {
+    background-color: #4E2097;
+    color: white;
+    font-family: 'Baloo';
+    border: #4E2097;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.form-control {
+    font-size: 15px;
+}
+
+.form-control,
+.form-control:focus,
+.input-group-text {
+    border-color: #e1e1e1;
+}
+
+.form-control,
+.btn {
+    border-radius: 3px;
+}
+
+.signup-form {
+    width: 900px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.signup-form form {
+    color: #999;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    background: #fff;
+    padding: 30px;
+}
+
+.signup-form h2 {
+    color: #333;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.signup-form hr {
+    margin: 0 -30px 20px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.signup-form label {
+    font-weight: normal;
+    font-size: 15px;
+    font-family: 'Baloo';
+}
+
+.signup-form .form-control {
+    min-height: 38px;
+    box-shadow: none !important;
+}
+
+.signup-form .input-group-addon {
+    max-width: 42px;
+    text-align: center;
+}
+
+
+.input-group-prepend,
+.input-group-text {
+    background: #4E2097 !important;
+    border: #4E2097 !important;
+}
+
+.signup-form .btn,
+.signup-form .btn:active {
+    font-size: 16px;
+    font-weight: bold;
+    background: #4E2097 !important;
+    border: none;
+    min-width: 140px;
+    font-family: 'Baloo' !important;
+}
+
+.btn-form {
+    margin-left: 40%;
+}
+
+.signup-form .btn:hover,
+.signup-form .btn:focus {
+    background: #4E3070 !important;
+}
+
+.signup-form a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.signup-form a:hover {
+    text-decoration: none;
+}
+
+.signup-form form a {
+    color: #4E2097;
+    text-decoration: none;
+}
+
+.signup-form form a:hover {
+    text-decoration: underline;
+}
+
+.signup-form .fa {
+    font-size: 21px;
+    color: white !important;
+}
+
+.signup-form .fa {
+    margin-top: 2px;
+}
+
+.signup-form .fa-calendar {
+    font-size: 17px !important;
+    margin-top: 3px;
+}
+
+.signup-form .fa-id-card {
+    font-size: 14px !important;
+    margin-top: 5px;
+}
+
+.signup-form .fa-paw {
+    font-size: 17px !important;
+    margin-top: 4px;
+}
+
+.signup-form .fa-star {
+    font-size: 18px !important;
+    margin-top: 4px;
+}
+
+.signup-form .fa-pencil {
+    font-size: 20px !important;
+    margin-top: 4px;
+}
+
+.signup-form .fa-heart {
+    font-size: 18px !important;
+    margin-top: 5px;
+}
+
+
+/* fim do form */
+
 /*CARD*/
 
 #team {
