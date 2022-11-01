@@ -19,9 +19,20 @@ body {
 .navbar-brand,
 .text-uppercase,
 h4,
-h2 {
+h2,
+th {
     font-family: 'Baloo';
     color: #4E2097 !important;
+}
+
+table {
+    color: #4E2097 !important;
+    font-size: 17px;
+    text-align: center;
+}
+
+.tabela {
+    margin-bottom: 50px;
 }
 
 .btn-primary {
@@ -496,7 +507,7 @@ label {
 }
 
 .signup-form .fa-calendar {
-    font-size: 17px !important;
+    font-size: 18px !important;
     margin-top: 3px;
 }
 

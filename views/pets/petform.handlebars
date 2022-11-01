@@ -2,9 +2,8 @@
   <h1 class="text-center header-text">Cadastrar Pet</h1>
 </div>
 
-
 <div class="signup-form">
-  <form action="/cliente/add" method="post">
+  <form action="/pets/add" method="post">
     <p>Preencha o formulário para cadastrar um pet</p>
     <hr>
     <div class="form-group">
@@ -17,6 +16,7 @@
         <input type="text" class="form-control" name="nome" placeholder="Nome" required="required">
       </div>
     </div>
+
     <div class="form-group">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -27,6 +27,7 @@
         <input type="text" class="form-control" name="especie" placeholder="Especie" required="required">
       </div>
     </div>
+
     <div class="form-group">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -35,6 +36,17 @@
           </span>
         </div>
         <input type="text" class="form-control" name="raça" placeholder="Raça" required="required">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-calendar"></i>
+          </span>
+        </div>
+        <input type="date" class="form-control" name="nascimento" placeholder="Nascimento" required="required">
       </div>
     </div>
     <div class="form-group">
