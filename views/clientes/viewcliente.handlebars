@@ -1,3 +1,15 @@
+<script>
+  function deleteModal(clienteId){
+    let campoId = document.getElementById("clienteId");
+    campoId.value = clienteId;
+    $("#deleteModal").modal("show");
+  }
+
+  function ocultaModa(){
+    $("#deleteModal").modal("hide");
+  }
+</script>
+
 <div class=" text-center header">
   <h1 class="text-center header-text">Todos os Clientes</h1>
 </div>
@@ -21,15 +33,35 @@
         <td>{{this.cpf}}</td>
         <td><a href="/clientes/edit/{{this.id}}">{{> edit_cliente}}</a></td>
         <td>
-          <form action="/clientes/remove" method="post">
-            <input type="hidden" name="id" value="{{this.id}}">
-            <button type="submit">
+            <button type="button" onclick="deleteModal({{this.id}})">
               {{> del_cliente}}
             </button>
-          </form>
         </td>
       </tr>
       {{/each}}
     </tbody>
   </table>
 </div>
+
+<form action="/clientes/remove" method="post">
+  <input type="hidden" name="id" id="clienteId">
+  <div class="modal fade" tabindex="-1" role="dialog" id="deleteModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Atenção</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="ocultaModa()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Deseja realmente excluir esse cliente?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Sim, eu tenho!</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="ocultaModa()">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
