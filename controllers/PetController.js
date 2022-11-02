@@ -45,7 +45,8 @@ module.exports = class PetController {
   static async updatePet(req, res) {
     const id = req.params.id
     const pet = await Pet.findOne({ where: { id: id }, raw: true })
-    res.render('pets/edit', { pet })
+    const cliente = await Cliente.findOne({where: {id: pet.dono}, raw: true})
+    res.render('pets/edit', { pet, cliente })
 
   }
 
