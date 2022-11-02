@@ -7,9 +7,13 @@ const Pet = require('./routes/petRouter')
 const Cliente = require('./routes/clienteRouter')
 const Funcionario = require('./routes/funcionarioRouter')
 const conn = require('./db/conn')
+const flash = require('express-flash')
+const session = require('express-session')
+, Filestore = require('session-file-store')(session);
 const petModel = require('./model/Pets')
 const clienteModel = require('./model/Cliente')
 const funcionarioRouter = require('./model/Funcionario')
+const Cookie = require('express-session')
 
 const hbs = exphbs.create({
   partialsDir: ["views/partials"]
@@ -29,6 +33,38 @@ app.use(express.json())
 
 //adicionando CSS
 app.use(express.static('public'))
+
+//configuração de session
+app.use(flash());
+
+app.use(
+  session({
+    nome:"session",
+    secret:"secret",
+    resave:false,
+    saveUninitialized:false,
+    store: new Filestore({
+      logFn: function () { },
+      path: require('path').join(require('os').tmpdir(), 'sessions'),
+    }),
+    cookie: {
+      secure: false,
+      maxAge: 360000,
+      expires: new Date(Date.now() + 350000),
+      httpOnly: true
+    }
+
+  })
+)
+
+//set session to res
+app.use((req,res,next) =>{
+  console.log(req.session.funcionarioid);
+  if(req.session.funcionarioid) {
+    res.locals.session = req.session
+  }
+  next();
+})
 
 //adicionando rota Pets
 app.use('/petshop', petshop )

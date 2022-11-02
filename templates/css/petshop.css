@@ -4,7 +4,10 @@
 }
 
 
-/* .btn_delet{
+
+.box-login-btn {
     display: flex;
-    align-items: ;
-} */
+    justify-content: space-between;
+}
+
+
