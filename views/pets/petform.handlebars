@@ -59,7 +59,6 @@
         <input type="text" class="form-control" name="cor" placeholder="Cor do Pet" required="required">
       </div>
     </div>
-
     <div class="form-group">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -70,6 +69,23 @@
         <input type="text" class="form-control" name="peso" placeholder="Peso do Pet" required="required">
       </div>
     </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-user"></i>
+          </span>
+        </div>
+        <select class="form-control" name="dono" placeholder="Dono do Pet" required="required">
+          <option value="" selected disabled>Selecione o dono do pet:</option>
+          {{#each clientes}}
+            <option value="{{this.id}}">{{this.nome}} {{this.sobrenome}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+
     <div class="form-group">
       <button type="submit" class="btn-form text-center btn-primary btn-lg">Cadastrar</button>
     </div>
