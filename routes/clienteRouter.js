@@ -8,5 +8,6 @@ router.get('/edit/:id', ClienteController.updateViewCliente)
 router.post('/edit', ClienteController.updateCliente)
 router.post('/remove', ClienteController.removeCliente)
 router.get('/allCliente', ClienteController.allCliente)
+router.get('/allPetsByCliente/:id', ClienteController.allPetsByCliente)
 
 module.exports = router

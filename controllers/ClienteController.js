@@ -1,5 +1,5 @@
 const Cliente= require('../model/Cliente')
-
+const Pet = require('../model/Pets')
 
 module.exports = class ClienteController {
 
@@ -62,5 +62,12 @@ module.exports = class ClienteController {
       .catch((err) => {
         console.log(err)
       })
+  }
+
+  static async allPetsByCliente(req, res){
+    const id = req.params.id
+    const cliente = await Cliente.findOne({ where: { id: id }, raw: true })
+    const pets = await Pet.findAll({where: {dono: id}, raw: true})
+    res.render('clientes/viewpetsbycliente', { cliente, pets })
   }
 }

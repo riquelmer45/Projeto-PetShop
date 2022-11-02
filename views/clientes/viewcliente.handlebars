@@ -31,10 +31,11 @@
         <td>{{this.sobrenome}}</td>
         <td>{{this.data_nascimento}}</td>
         <td>{{this.cpf}}</td>
-        <td><a href="/clientes/edit/{{this.id}}">{{> edit_cliente}}</a></td>
+        <td><a href="/clientes/allPetsByCliente/{{this.id}}">{{> view_pets_cliente}}</a></td>
+        <td><a href="/clientes/edit/{{this.id}}">{{> edit}}</a></td>
         <td>
             <button type="button" onclick="deleteModal({{this.id}})">
-              {{> del_cliente}}
+              {{> del}}
             </button>
         </td>
       </tr>
