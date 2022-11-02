@@ -34,7 +34,7 @@ app.use(express.static('public'))
 app.use('/petshop', petshop)
 app.use('/pets', Pet)
 //adicionando rota Cliente
-app.use('/cliente', Cliente)
+app.use('/clientes', Cliente)
 //adcionando a rota Funcionario
 app.use('/funcionarios', Funcionario)
 

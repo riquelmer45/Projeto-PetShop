@@ -11,7 +11,7 @@ module.exports = class ClienteController {
     const cliente = {
       nome: req.body.nome,
       sobrenome: req.body.sobrenome,
-      data_nascimento: req.body.data,
+      data_nascimento: req.body.dataNascimento,
       cpf: req.body.cpf
     }
 
@@ -21,7 +21,7 @@ module.exports = class ClienteController {
       }).catch((error) => {
         console.log(error)
       })
-    res.redirect('/cliente/allCliente')
+    res.redirect('/clientes/allCliente')
 
   }
   static async home(req, res) {
@@ -30,7 +30,7 @@ module.exports = class ClienteController {
 
   static async allCliente(req, res) {
     const clientes = await Cliente.findAll({ raw: true })
-    res.render('cliente/viewcliente', { clientes })
+    res.render('clientes/viewcliente', { clientes })
   }
 
   /* static async updatePet(req, res) {
