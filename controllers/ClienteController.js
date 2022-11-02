@@ -11,7 +11,7 @@ module.exports = class ClienteController {
     const cliente = {
       nome: req.body.nome,
       sobrenome: req.body.sobrenome,
-      data_nascimento: req.body.dataNascimento,
+      data_nascimento: req.body.data_nascimento,
       cpf: req.body.cpf
     }
 
@@ -33,36 +33,34 @@ module.exports = class ClienteController {
     res.render('clientes/viewcliente', { clientes })
   }
 
-  /* static async updatePet(req, res) {
+  static async updateViewCliente(req, res) {
     const id = req.params.id
-    const pet = await Pet.findOne({ where: { id: id }, raw: true })
-    res.render('pets/edit', { pet })
-
+    const cliente = await Cliente.findOne({ where: { id: id }, raw: true })
+    res.render('clientes/editcliente', { cliente })
   }
 
-  static async updatePetSave(req, res) {
+  static async updateCliente(req, res) {
     const id = req.body.id
-    const pet = {
+    const cliente = {
       nome: req.body.nome,
-      especie: req.body.especie,
-      raça: req.body.raça,
-      nascimento: req.body.nascimento,
-      cor: req.body.cor,
-      peso: req.body.peso,
+      sobrenome: req.body.sobrenome,
+      data_nascimento: req.body.data_nascimento,
+      cpf: req.body.cpf
     }
-    await Pet.update(pet, { where: { id: id } })
-      .then(res.redirect('/pets/allPets'))
+    
+    await Cliente.update(cliente, { where: { id: id } })
+      .then(res.redirect('/clientes/allCliente'))
       .catch((err) => {
         console.log(err)
       })
   }
 
-  static async removePet(req, res) {
+  static async removeCliente(req, res) {
     const id = req.body.id
-    await Pet.destroy({ where: { id: id } })
-      .then(res.redirect('/pets/allPets'))
+    await Cliente.destroy({ where: { id: id } })
+      .then(res.redirect('/clientes/allCliente'))
       .catch((err) => {
         console.log(err)
       })
-  } */
+  }
 }

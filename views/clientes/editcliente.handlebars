@@ -1,0 +1,54 @@
+<div class=" text-center header">
+  <h1 class="text-center header-text">Editar Dados - Cliente {{cliente.nome}}</h1>
+</div>
+
+<div class="signup-form">
+  <form action="/clientes/edit" method="post">
+    <p>Preencha o formulário para editar o Cliente {{cliente.nome}}</p>
+    <hr>
+    <input type="hidden" name="id" value="{{cliente.id}}" />
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <span class="fa fa-paw"></span>
+          </span>
+        </div>
+        <input type="text" class="form-control" name="nome" value="{{cliente.nome}}" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-star"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" name="sobrenome" value="{{cliente.sobrenome}}" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-calendar"></i>
+          </span>
+        </div>
+        <input type="date" class="form-control" name="data_nascimento" value="{{cliente.data_nascimento}}" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-pencil"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" name="cpf" value="{{cliente.cpf}}" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn-form text-center btn-primary btn-lg">Atualizar</button>
+    </div>
+  </form>
+</div>
