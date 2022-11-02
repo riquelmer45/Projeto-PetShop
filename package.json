@@ -8,7 +8,7 @@
     "sequelize": "^6.25.1"
   },
   "name": "projeto-petshop",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
