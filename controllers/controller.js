@@ -12,34 +12,36 @@ module.exports = class controller {
         res.render('petshop/login')
     }
 
+    static logout(req,res) {
+        console.log('Sessao encerrada!')
+        req.session.destroy()
+        res.redirect('/')
+    }
+
     static async loginSubmit(req, res){
         try {
             const { login, senha} = req.body
             const funcionario = await Funcionario.findOne({
                 where: { login: login }
-            })  
+            })
+
             if(!funcionario){
                 req.flash('massage', 'Funcionario não cadastrado')
                 res.render('funcionarios/funcionarioform')
             }
-            if(!senha === Funcionario.senha){
+            if(!senha === funcionario.senha){
                 req.flash('massage', 'Senha Inválida')
                 res.render('funcionario/funcionarioform')
                 return
             }
-            req.session.funcionarioid = Funcionario.id
+
+            req.session.userid = funcionario.id
             req.flash('massage', 'Funcionario logado com sucesso!')
             req.session.save(()=>{
                 res.redirect('/')
             })
-            console.log('sessao inicada')
         } catch (error) {
             console.log(error)
         }      
     }
-    static logout(req,res) {
-        req.session.destroy()
-        res.redirect('/')
-    }
-
 }

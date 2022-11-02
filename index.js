@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 4000
+const port = 8000
 const exphbs = require('express-handlebars')
 const petshop = require('./routes/router')
 const Pet = require('./routes/petRouter')
@@ -34,9 +34,10 @@ app.use(express.json())
 
 app.use(express.static('public'))
 
-//configuração de session
-app.use(flash());
+//flash massege
+app.use(flash())
 
+//configuração de session
 app.use(
   session({
     nome:"session",
@@ -56,11 +57,10 @@ app.use(
 
   })
 )
-
 //set session to res
 app.use((req,res,next) =>{
-  console.log(req.session.funcionarioid);
-  if(req.session.funcionarioid) {
+  console.log(req.session.userid);
+  if(req.session.userid) {
     res.locals.session = req.session
   }
   next();
@@ -83,7 +83,7 @@ app.get('/', (req, res) => {
 conn
   .sync()
   .then(() => {
-    app.listen(8000)
+    app.listen(port)
     console.log('Server Started')
   })
   .catch((err) => {
