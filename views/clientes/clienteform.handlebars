@@ -1,0 +1,55 @@
+<div class=" text-center header">
+    <h1 class="text-center header-text">Cadastrar Cliente</h1>
+</div>
+
+
+<div class="signup-form">
+    <form action="/clientes/add" method="post">
+        <p>Preencha o formulário para cadastrar um cliente</p>
+        <hr>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <span class="fa fa-user"></span>
+                    </span>
+                </div>
+                <input type="text" class="form-control" name="nome" placeholder="Nome" required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="fa fa-user"></i>
+                    </span>
+                </div>
+                <input type="text" class="form-control" name="sobrenome" placeholder="Sobrenome" required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                </div>
+                <input type="date" class="form-control" name="data_nascimento" placeholder="Data de Nascimento"
+                    required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="fa fa-id-card"></i>
+                    </span>
+                </div>
+                <input type="text" class="form-control" name="cpf" placeholder="CPF" required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn-form text-center btn-primary btn-lg">Cadastrar</button>
+        </div>
+    </form>
+</div>

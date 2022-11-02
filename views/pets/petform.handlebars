@@ -1,18 +1,93 @@
-<div class = "div_form">
-<h1 class="text-center">Cadastrar Pet</h1>
+<div class=" text-center header">
+  <h1 class="text-center header-text">Cadastrar Pet</h1>
+</div>
 
-<form action="/pets/add" method="post">
-  <div class="fc">
+<div class="signup-form">
+  <form action="/pets/add" method="post">
+    <p>Preencha o formulário para cadastrar um pet</p>
+    <hr>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <span class="fa fa-paw"></span>
+          </span>
+        </div>
+        <input type="text" class="form-control" name="nome" placeholder="Nome" required="required">
+      </div>
+    </div>
 
-    <input type="text" name="nome" placeholder="Nome do Animal">
-    <input type="text" name="especie" placeholder="Especie do Animal">
-    <input type="text" name="raça" placeholder="Raça do Animal">
-    <input type="text" name="nascimento" placeholder="Data de Nascimento">
-    <input type="text" name="cor" placeholder="Cor do Pet">
-    <input type="text" name="peso" placeholder="Peso do Pet"></div>
-    
-   <br><input type="submit" value="Cadastrar" />
-  </div>
-</form> <br>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-star"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" name="especie" placeholder="Especie" required="required">
+      </div>
+    </div>
 
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-filter"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" name="raça" placeholder="Raça" required="required">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-calendar"></i>
+          </span>
+        </div>
+        <input type="date" class="form-control" name="nascimento" placeholder="Nascimento" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-pencil"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" name="cor" placeholder="Cor do Pet" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-heart"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" name="peso" placeholder="Peso do Pet" required="required">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-user"></i>
+          </span>
+        </div>
+        <select class="form-control" name="dono" placeholder="Dono do Pet" required="required">
+          <option value="" selected disabled>Selecione o dono do pet:</option>
+          {{#each clientes}}
+            <option value="{{this.id}}">{{this.nome}} {{this.sobrenome}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn-form text-center btn-primary btn-lg">Cadastrar</button>
+    </div>
+  </form>
 </div>

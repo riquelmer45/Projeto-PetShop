@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Petshop</title>
-    <link rel="stylesheet" href="/css/style.css
-    " />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="imgs/logo.png">
 
-  </head>
-<body>
-  <div class="navbar-container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <title>Petshop</title>
+
+    <link type="text/css" href="/css/styles.css" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <div class="navbar-container">
+        <nav class="navbar navbar-expand-lg barra-de-navegacao">
             <div class="container-fluid">
+<<<<<<< HEAD
                 {{!-- <img class="img_icon" src="" alt="" width="30cm" height="30cm"> --}}
                 <a class="navbar-brand" href="#">PetShop</a>
+=======
+                <img class="img_icon" src="/imgs/logo.png" alt="patinha de cachorro vermelha" width="20cm"
+                    height="20cm">
+                <a class="navbar-brand titulo" href="/">PetShop</a>
+>>>>>>> origin/main-develop
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -31,29 +46,45 @@
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item dropdown">
+<<<<<<< HEAD
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Clientes
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Cadastrar Cliente</a></li>
                                 <li><a class="dropdown-item" href="#">Listar Clientes</a></li>
+=======
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Clientes
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/clientes/add">Cadastrar Cliente</a></li>
+                                <li><a class="dropdown-item" href="/clientes/allCliente">Listar Clientes</a></li>
+>>>>>>> origin/main-develop
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Pets
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/pets/add">Cadastrar Pet</a></li>
                                 <li><a class="dropdown-item" href="/pets/allPets">Listar Pets</a></li>
                             </ul>
-                        </li>  
+                        </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Funcionario
                             </a>
                             <ul class="dropdown-menu">
+<<<<<<< HEAD
                                 <li><a class="dropdown-item" href="/funcionarios/add">Novo Funcionario</a></li>
+=======
+                                <li><a class="dropdown-item" href="/funcionarios/add">Cadastrar Funcionario</a></li>
+>>>>>>> origin/main-develop
                                 <li><a class="dropdown-item" href="/funcionarios/allFuncionario">Listar Funcionarios</a></li>
                             </ul>
                         </li>
@@ -64,11 +95,104 @@
                     <a class="btn btn-light" href="/petshop/login">Login</a>
                 </div>
             </div>
+            <div>
+                <h3>{{message}}</h3>
+            </div>
         </nav>
     </div>
-  <div class="main_body">
-    {{{body}}}
-  </div>
+    <div class="main_body">
+        {{{body}}}
+    </div>
 
 </body>
+
+<!-- Footer -->
+<footer class=" text-center text-white mt-auto ">
+    <hr>
+    <!-- Grid container -->
+    <div class="container p-4 ">
+
+        <!-- Section: Links -->
+        <section class="baixo">
+            <p class="baixo">
+                Petshop - Cuidando do seu pet com muito amor
+            </p>
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">CLIENTE</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="/clientes/add" class="link-footer">Cadastrar Cliente</a>
+                        </li>
+                        <li>
+                            <a href="/clientes/allCliente" class="link-footer">Listar Cliente</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">PET</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="/pets/add" class="link-footer">Cadastrar Pet</a>
+                        </li>
+                        <li>
+                            <a href="/pets/allPets" class="link-footer">Listar Pets</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">FUNCIONARIO</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="/funcionarios/add" class="link-footer">Adicionar Funcionário</a>
+                        </li>
+                        <li>
+                            <a href="#" class="link-footer">Listar Funcionário</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">NOSSOS SERVIÇOS</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="link-footer">Banho</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="link-footer">Tosa</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </section>
+
+        <!-- Section: Links -->
+    </div>
+
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="bg-dark text-center text-center text-white">
+        © 2022 Copyright: Todos os direitos reservados à Petshop
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
 </html>

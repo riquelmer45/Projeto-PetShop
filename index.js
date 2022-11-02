@@ -31,7 +31,7 @@ app.use(
 )
 app.use(express.json())
 
-//adicionando CSS
+
 app.use(express.static('public'))
 
 //configuração de session
@@ -67,10 +67,10 @@ app.use((req,res,next) =>{
 })
 
 //adicionando rota Pets
-app.use('/petshop', petshop )
+app.use('/petshop', petshop)
 app.use('/pets', Pet)
 //adicionando rota Cliente
-app.use('/cliente', Cliente)
+app.use('/clientes', Cliente)
 //adcionando a rota Funcionario
 app.use('/funcionarios', Funcionario)
 
@@ -83,7 +83,7 @@ app.get('/', (req, res) => {
 conn
   .sync()
   .then(() => {
-    app.listen(3000)
+    app.listen(8000)
     console.log('Server Started')
   })
   .catch((err) => {

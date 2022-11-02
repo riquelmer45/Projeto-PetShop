@@ -8,7 +8,6 @@ router.get('/edit/:id', PetController.updatePet)
 router.post('/edit', PetController.updatePetSave)
 router.post('/remove', PetController.removePet)
 router.get('/allPets', PetController.allPets)
-router.get('/', PetController.home)
 
 
 module.exports = router
