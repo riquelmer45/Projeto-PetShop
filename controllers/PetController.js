@@ -1,10 +1,16 @@
 const Pet = require('../model/Pets')
+const Cliente = require('../model/Cliente')
 
 
 module.exports = class PetController {
 
-  static newPet(req, res) {
-    res.render('pets/petform')
+  static async newPet(req, res) {
+    const clientes = await Cliente.findAll({
+      attributes: ['id', 'nome', 'sobrenome'],
+      raw: true
+  })
+
+    res.render('pets/petform', {clientes})
   }
 
   static async newPetSave(req, res) {
@@ -15,11 +21,12 @@ module.exports = class PetController {
       nascimento: req.body.nascimento,
       cor: req.body.cor,
       peso: req.body.peso,
+      dono: req.body.dono,
     }
 
     await Pet.create(animal)
       .then(() => {
-        this.allPets()//carrega todos os usuários
+        this.allPets()
       }).catch((error) => {
         console.log(error)
       })

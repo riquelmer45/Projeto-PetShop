@@ -27,6 +27,10 @@ const Pet = db.define('Pet', {
     type: DataTypes.STRING,
     required: true
   },
+  dono: {
+    type: DataTypes.INTEGER,
+    required: true
+  }
 })
 
 module.exports = Pet
