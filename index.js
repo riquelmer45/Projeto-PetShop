@@ -47,7 +47,7 @@ app.get('/', (req, res) => {
 conn
   .sync()
   .then(() => {
-    app.listen(3000)
+    app.listen(8000)
     console.log('Server Started')
   })
   .catch((err) => {
