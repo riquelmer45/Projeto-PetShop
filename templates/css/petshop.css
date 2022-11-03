@@ -1,0 +1,13 @@
+.action_btn {
+    display: flex;
+    float: left;
+}
+
+
+
+.box-login-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+

@@ -11,24 +11,29 @@
                 <th scope="col">Data de Nascimento</th>
                 <th scope="col">Função</th>
                 <th scope="col">Login</th>
-                <th scope="col">Senha</th>
-                <th scope="col">Actions</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Deletar</th>
                 </tr>
             </thead>
         {{#each funcionarios}}   
-            <tbody>
+            <tbody >
                 <tr>
                 <th scope="row">{{this.id}}</th>
-                <td>{{this.nome}}</td>
-                <td>{{this.sobrenome}}</td>
+                <td class="col-4 ">{{this.nome}}</td>
+                <td class="col-3">{{this.sobrenome}}</td>
                 <td>{{this.data_nascimento}}</td>
                 <td>{{this.funcao}}</td>
                 <td>{{this.login}}</td>
-                <td>{{this.senha}}</td>
-
-                <td class="text-end">
-                        <a href="/funcionarios/edit/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i> Edit</a>
-                        <a href="/funcionarios/remove" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i> Delete</a>
+                <td>
+                        <div class="d-flex justify-content-end">
+                            <a href="/funcionarios/edit/{{this.id}}" type="button" class="btn btn-light btn-small me-1">{{> edit}}</a>
+                            <form action="/funcionarios/remove" method="post" class="">
+                                <input type="hidden" name="id" value="{{this.id}}">
+                                <button type="submit" class="btn btn-light btn-smal">
+                                    {{> del}}
+                                </button>
+                            </form>
+                        </div>
                     </td>
                 </tr>      
             </tbody>

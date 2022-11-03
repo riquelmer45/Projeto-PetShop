@@ -28,7 +28,8 @@ const Funcionario = db.define('Funcionario', {
     },
     senha: {
         type: DataTypes.STRING,
-        required: true
+        required: true,
+        defaultValue: '123'
     }
 })
     

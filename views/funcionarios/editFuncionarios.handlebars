@@ -1,0 +1,59 @@
+<h1>Editar dados {{funciionario.nome}}</h1>
+
+<div class="back_view">
+  <form action="/funcionarios/edit" method="post" class="row m-3">
+        <div class="row align-items-start">
+            <input type="hidden" name="id" value="{{funcionario.id}}" />
+            <div class="col-md-6">
+                <label for="nome" class="form-label">Nome:</label>
+                <input type="text" name="nome" value="{{funcionario.nome}}" class="form-control" />
+            </div>
+        </div>
+
+        <div class="row align-items-start">
+            <div class="col-md-4">
+                <label for="sobrenome" class="form-label">Sobrenome:</label>
+                <input type="text" name="sobrenome" value="{{funcionario.sobrenome}}" class="form-control" />
+            </div>
+        </div>
+        
+        <div class="row align-items-start">
+            <div class="col-md-4">
+                <label for="dataNascimento" class="form-label">Data de Nascimento:</label>
+                <input type="date" name="dataNascimento" value="{{funcionario.data_nascimento}}" class="form-control" />
+            </div>
+        </div>
+
+        <div class="row align-items-start">
+            <div class="col-md-4">
+                <label for="cpf" class="form-label">CPF:</label>
+                <input type="text" name="cpf" value="{{funcionario.cpf}}" class="form-control" />
+            </div>
+        </div>
+        
+        <div class="row align-items-start">
+            <div class="col-md-4">
+                <label for="funcao" class="form-label">Função:</label>
+                <input type="text" name="funcao" value="{{funcionario.funcao}}" class="form-control" />
+            </div>
+        </div>
+
+        <div class="row align-items-start">
+            <div class="col-md-4">
+                <label for="login" class="form-label">Login:</label>
+                <input type="text" name="login" value="{{funcionario.login}}" class="form-control" />
+            </div>
+        </div>
+
+        <div class="row align-items-start">
+            <div class="col-md-4">
+                <label for="senha" class="form-label">Senha:</label>
+                <input type="text" name="senha" value="{{funcionario.senha}}" class="form-control" />
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <input type="submit" value="Atualizar" />
+        </div>
+    </form>
+</div>   
