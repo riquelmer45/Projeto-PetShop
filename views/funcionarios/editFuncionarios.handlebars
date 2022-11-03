@@ -1,18 +1,18 @@
 </div>
 <div class=" text-center header">
-  <h1 class="text-center header-text">Editar Dados - Cliente {{funcionario.nome}}</h1>
+  <h1 class="text-center header-text">Editar Dados - Funcionário {{funcionario.nome}}</h1>
 </div>
 
 <div class="signup-form">
   <form action="/clientes/edit" method="post">
-    <p>Preencha o formulário para editar o Cliente {{funcionario.nome}}</p>
+    <p>Preencha o formulário para editar o Funcionário {{funcionario.nome}}</p>
     <hr>
     <input type="hidden" name="id" value="{{funcionario.id}}" />
     <div class="form-group">
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text">
-            <span class="fa fa-paw"></span>
+            <span class="fa fa-user"></span>
           </span>
         </div>
         <input type="text" class="form-control" name="nome" value="{{funcionario.nome}}" required="required">
@@ -22,7 +22,7 @@
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text">
-            <i class="fa fa-star"></i>
+            <i class="fa fa-user"></i>
           </span>
         </div>
         <input type="text" class="form-control" name="sobrenome" value="{{funcionario.sobrenome}}" required="required">
@@ -35,51 +35,52 @@
             <i class="fa fa-calendar"></i>
           </span>
         </div>
-        <input type="date" class="form-control" name="data_nascimento" value="{{funcionario.data_nascimento}}" required="required">
+        <input type="date" class="form-control" name="data_nascimento" value="{{funcionario.data_nascimento}}"
+          required="required">
       </div>
     </div>
     <div class="form-group">
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text">
-            <i class="fa fa-pencil"></i>
+            <i class="fa fa-id-card"></i>
           </span>
         </div>
         <input type="text" class="form-control" name="cpf" value="{{funcionario.cpf}}" required="required">
       </div>
     </div>
     <div class="form-group">
-        <div class="input-group">
-            <div class="input-group-prepend">
-            <span class="input-group-text">
-                <i class="fa fa-star"></i>
-            </span>
-            </div>
-            <input type="text" class="form-control" name="funcao" value="{{funcionario.funcao}}" required="required">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-star"></i>
+          </span>
         </div>
+        <input type="text" class="form-control" name="funcao" value="{{funcionario.funcao}}" required="required">
+      </div>
     </div>
     <div class="form-group">
-        <div class="input-group">
-            <div class="input-group-prepend">
-            <span class="input-group-text">
-                <i class="fa fa-star"></i>
-            </span>
-            </div>
-            <input type="text" class="form-control" name="login" value="{{funcionario.login}}" required="required">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-user"></i>
+          </span>
         </div>
+        <input type="text" class="form-control" name="login" value="{{funcionario.login}}" required="required">
+      </div>
     </div>
     <div class="form-group">
-        <div class="input-group">
-            <div class="input-group-prepend">
-            <span class="input-group-text">
-                <i class="fa fa-star"></i>
-            </span>
-            </div>
-            <input type="text" class="form-control" name="senha" value="{{funcionario.senha}}" required="required">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-check"></i>
+          </span>
         </div>
+        <input type="text" class="form-control" name="senha" value="{{funcionario.senha}}" required="required">
+      </div>
     </div>
     <div class="form-group">
       <button type="submit" class="btn-form text-center btn-primary btn-lg">Atualizar</button>
     </div>
   </form>
-</div>   
+</div>

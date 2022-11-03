@@ -536,6 +536,10 @@ label {
     margin-top: 5px;
 }
 
+.signup-form .fa-check {
+    font-size: 15px !important;
+    margin-top: 5px;
+}
 
 /* fim do form */
 

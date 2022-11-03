@@ -1,7 +1,11 @@
+<!--login
+
+<div class=" text-center header">
+    <h1 class="text-center header-text">Login</h1>
+</div>
 <div>
-    <h1 class="text-center">Login</h1>
     <div class="box-login">
-         <form action="/petshop/login" class="p-2" method="post">
+        <form action="/petshop/login" class="p-2" method="post">
             <div class="row mb-2">
                 <label class="col-sm-2 col-form-label">Login</label>
                 <div class="col-sm-8">
@@ -17,13 +21,54 @@
             <div class="box-login-btn d-flex justify-content-center align-items-center flex-column">
                 <div style="width: 100%;" class="d-flex justify-content-end">
                     <a id="recuperar-senha" class="fst-italic fs-6 text-muted ms" href="#">Esqueci a senha</a>
-                </div>                
+                </div>
 
-                <input class="btn btn-success" type="submit" value="Login">                
+                <input class="btn btn-success" type="submit" value="Login">
             </div>
-            
-            
-                     
+
+
+
         </form>
     </div>
+</div>
+-->
+
+
+<!--LOGIN-->
+</div>
+<div class=" text-center header">
+    <h1 class="text-center header-text">Login</h1>
+</div>
+
+<div class="signup-form">
+    <form action="/petshop/login" method="post">
+        <p>Preencha o formulário para logar</p>
+        <hr>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <span class="fa fa-user"></span>
+                    </span>
+                </div>
+                <input type="text" class="form-control" name="login" placeholder="Informe o Login" required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="fa fa-user"></i>
+                    </span>
+                </div>
+                <input type="text" class="form-control" name="senha" placeholder="Informe a Senha" required="required">
+            </div>
+        </div>
+        <div style="width: 100%;" class="d-flex justify-content-end">
+            <a id="recuperar-senha" class="fst-italic fs-6 text-muted ms" href="#">Esqueci a senha</a>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn-form text-center btn-primary btn-lg">Entrar</button>
+        </div>
+    </form>
 </div>

@@ -1,11 +1,11 @@
 <script>
-  function deleteModal(clienteId){
+  function deleteModal(clienteId) {
     let campoId = document.getElementById("clienteId");
     campoId.value = clienteId;
     $("#deleteModal").modal("show");
   }
 
-  function ocultaModa(){
+  function ocultaModa() {
     $("#deleteModal").modal("hide");
   }
 </script>
@@ -22,6 +22,8 @@
         <th scope="col">Sobrenome</th>
         <th scope="col">Nascimento</th>
         <th scope="col">CPF</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Deletar</th>
       </tr>
     </thead>
     {{#each clientes}}
@@ -33,9 +35,9 @@
         <td>{{this.cpf}}</td>
         <td><a href="/clientes/edit/{{this.id}}">{{> edit_cliente}}</a></td>
         <td>
-            <button type="button" onclick="deleteModal({{this.id}})">
-              {{> del_cliente}}
-            </button>
+          <button type="button" onclick="deleteModal({{this.id}})">
+            {{> del_cliente}}
+          </button>
         </td>
       </tr>
       {{/each}}
@@ -58,7 +60,7 @@
           <p>Deseja realmente excluir esse cliente?</p>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Sim, eu tenho!</button>
+          <button type="submit" class="btn btn-primary">Sim!</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="ocultaModa()">Cancelar</button>
         </div>
       </div>

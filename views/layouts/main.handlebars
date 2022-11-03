@@ -37,52 +37,53 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        {{#if session.userid}}  
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Clientes
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/clientes/add">Cadastrar Cliente</a></li>
-                                    <li><a class="dropdown-item" href="/clientes/allCliente">Listar Clientes</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Pets
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/pets/add">Cadastrar Pet</a></li>
-                                    <li><a class="dropdown-item" href="/pets/allPets">Listar Pets</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Funcionario
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/funcionarios/add">Cadastrar Funcionario</a></li>
-                                    <li><a class="dropdown-item" href="/funcionarios/allFuncionario">Listar Funcionarios</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/">Lista de Serviços</a>
-                            </li>
-                            <a class="btn btn-light" href="/petshop/logout">logout</a>
+                        {{#if session.userid}}
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Clientes
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/clientes/add">Cadastrar Cliente</a></li>
+                                <li><a class="dropdown-item" href="/clientes/allCliente">Listar Clientes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Pets
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/pets/add">Cadastrar Pet</a></li>
+                                <li><a class="dropdown-item" href="/pets/allPets">Listar Pets</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Funcionario
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/funcionarios/add">Cadastrar Funcionario</a></li>
+                                <li><a class="dropdown-item" href="/funcionarios/allFuncionario">Listar Funcionarios</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Lista de Serviços</a>
+                        </li>
+                        <a class="btn btn-light" href="/petshop/logout">logout</a>
                         {{else}}
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/">Lista de Serviços</a>
-                            </li>
-                            <a class="btn btn-light" href="/petshop/login">Login</a>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Lista de Serviços</a>
+                        </li>
+                        <a class="btn btn-light" href="/petshop/login">Login</a>
                         {{/if}}
                     </ul>
                 </div>
@@ -92,19 +93,19 @@
             </div>
         </nav>
     </div>
-  <div class="main_body">
-    {{{body}}}
-    {{#if massages.massage}}
+    <div class="main_body">
+        {{{body}}}
+        {{#if massages.massage}}
         <div class="massage">
             {{massages.massage}}
         </div>
-    {{/if}}
-    {{#if massage}}
+        {{/if}}
+        {{#if massage}}
         <div class="massage">
             {{massage}}
         </div>
-    {{/if}}  
-  </div>
+        {{/if}}
+    </div>
 
 </body>
 
