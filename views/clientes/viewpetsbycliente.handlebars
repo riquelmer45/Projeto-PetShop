@@ -38,7 +38,8 @@
         <td>{{this.peso}}</td>
         <td><a href="/pets/edit/{{this.id}}">{{> edit}}</a></td>
         <td>
-          <button type="button" onclick="deleteModal({{this.id}})">
+          <button type="button"
+          style="border: none !important; background-color: transparent !important;"  onclick="deleteModal({{this.id}})">
               {{> del}}
             </button>
         </td>
