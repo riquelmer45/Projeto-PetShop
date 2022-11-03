@@ -1,29 +1,32 @@
-<div>
-    <h1 class="text-center">Login</h1>
-    <div class="box-login">
-         <form action="/petshop/login" class="p-2" method="post">
-            <div class="row mb-2">
-                <label class="col-sm-2 col-form-label">Login</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" name="login" placeholder="Informe o Login">
+<div class="text-center header">
+  <h1 class="text-center header-text">Login</h1>
+</div>
+<div class="container">
+    <div class="signup-form"></div>
+        <form action="/petshop/login" class="p-2" method="post">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-id-card"></i>
+                        </span>
+                    </div>
+                    <input type="text" class="form-control" name="login" placeholder="Login" required="required">
                 </div>
             </div>
-            <div class="row mb-2">
-                <label class="col-sm-2 col-form-label">Senha</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" name="senha" placeholder="Informe a Senha">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-id-card"></i>
+                        </span>
+                    </div>
+                    <input type="text" class="form-control" name="senha" placeholder="Senha" required="required">
                 </div>
             </div>
-            <div class="box-login-btn d-flex justify-content-center align-items-center flex-column">
-                <div style="width: 100%;" class="d-flex justify-content-end">
-                    <a id="recuperar-senha" class="fst-italic fs-6 text-muted ms" href="#">Esqueci a senha</a>
-                </div>                
-
-                <input class="btn btn-success" type="submit" value="Login">                
-            </div>
-            
-            
-                     
+            <div class="form-group">
+                <button type="submit" class="btn-form text-center btn-primary btn-lg">Login</button>
+            </div> 
         </form>
     </div>
 </div>
