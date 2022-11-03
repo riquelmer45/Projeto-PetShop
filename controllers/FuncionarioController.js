@@ -1,4 +1,5 @@
 const Funcionario = require('../model/Funcionario')
+const bcrypt = require('bcrypt')
 
 module.exports = class FuncionarioController {
     static newFuncionario(req, res) {
@@ -13,7 +14,7 @@ module.exports = class FuncionarioController {
             cpf: req.body.cpf,
             funcao: req.body.funcao,
             login: req.body.login,
-            senha: req.body.senha
+            senha: bcrypt.hashSync(req.body.senha, 10) 
         }
 
         await Funcionario.create(funcionario)
@@ -45,7 +46,7 @@ module.exports = class FuncionarioController {
             cpf: req.body.cpf,
             funcao: req.body.funcao,
             login: req.body.login,
-            senha: req.body.senha
+            senha: bcrypt.hashSync(req.body.senha, 10) 
         }
         await Funcionario.update(funcionario, { where: { id: id} })
             .then(res.redirect('/funcionarios/allFuncionario'))

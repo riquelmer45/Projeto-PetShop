@@ -24,17 +24,22 @@ module.exports = class controller {
             const funcionario = await Funcionario.findOne({
                 where: { login: login }
             })
-
+            const validSenha = await bcrypt.compare(senha, funcionario.senha)//comentar esse trecho para caso n tenha senha incriptas
             if(!funcionario){
                 req.flash('massage', 'Funcionario não cadastrado')
                 res.render('funcionarios/funcionarioform')
             }
-            if(!senha === funcionario.senha){
+            //descomentar este if para caso n tenha funcionarios cadastrados com codificação de senha e comentar o seguinte
+            // if(!senha === funcionario.senha){
+            //     req.flash('massage', 'Senha Inválida')
+            //     res.render('funcionario/funcionarioform')
+            //     return
+            // }
+            if(!validSenha){
                 req.flash('massage', 'Senha Inválida')
                 res.render('funcionario/funcionarioform')
                 return
             }
-
             req.session.userid = funcionario.id
             req.flash('massage', 'Funcionario logado com sucesso!')
             req.session.save(()=>{
