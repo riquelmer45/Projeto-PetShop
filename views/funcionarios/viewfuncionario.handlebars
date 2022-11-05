@@ -1,43 +1,41 @@
-<h1>Todos os Funcionario</h1>
+<div class=" text-center header">
+  <h1 class="text-center header-text">Todos os Funcionarios</h1>
+</div>
 
-<div class="tabelaFuncionarios">
-    <table class="table table-dark table-sm">
-        
-            <thead class="thead-light">
-                <tr class="test-light">
-                <th scope="col">#</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Sobrenome</th>
-                <th scope="col">Data de Nascimento</th>
-                <th scope="col">Função</th>
-                <th scope="col">Login</th>
-                <th scope="col">Editar</th>
-                <th scope="col">Deletar</th>
-                </tr>
-            </thead>
-        {{#each funcionarios}}   
-            <tbody >
-                <tr>
-                <th scope="row">{{this.id}}</th>
-                <td class="col-4 ">{{this.nome}}</td>
-                <td class="col-3">{{this.sobrenome}}</td>
-                <td>{{this.data_nascimento}}</td>
-                <td>{{this.funcao}}</td>
-                <td>{{this.login}}</td>
-                <td>
-                        <div class="d-flex justify-content-end">
-                            <a href="/funcionarios/edit/{{this.id}}" type="button" class="btn btn-light btn-small me-1">{{> edit}}</a>
-                            <form action="/funcionarios/remove" method="post" class="">
-                                <input type="hidden" name="id" value="{{this.id}}">
-                                <button type="submit" class="btn btn-light btn-smal">
-                                    {{> del}}
-                                </button>
-                            </form>
-                        </div>
-                    </td>
-                </tr>      
-            </tbody>
-        {{/each}} 
-    </table>
-
+<div class="espaco tabela">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Sobrenome</th>
+        <th scope="col">Data de Nascimento</th>
+        <th scope="col">Função</th>
+        <th scope="col">Login</th>               
+        <th scope="col">Editar</th>
+        <th scope="col">Deletar</th>
+      </tr>
+    </thead>
+    {{#each funcionarios}}
+    <tbody>
+      <tr>
+        <th scope="row">{{this.id}}</th>
+        <td class="col-4 ">{{this.nome}}</td>
+        <td class="col-3">{{this.sobrenome}}</td>
+        <td>{{this.data_nascimento}}</td>
+        <td>{{this.funcao}}</td>
+        <td>{{this.login}}</td>
+        <td><a href="/funcionarios/edit/{{this.id}}">{{> edit_funcionario}}</a></td>
+        <td>
+          <form action="/funcionarios/remove" method="post">
+            <input type="hidden" name="id" value="{{this.id}}">
+            <button type="submit">
+              {{> del_funcionario}}
+            </button>
+          </form>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
 </div>

@@ -1,59 +1,85 @@
-<h1>Editar dados {{funciionario.nome}}</h1>
+</div>
+<div class=" text-center header">
+  <h1 class="text-center header-text">Editar Dados - Cliente {{funcionario.nome}}</h1>
+</div>
 
-<div class="back_view">
-  <form action="/funcionarios/edit" method="post" class="row m-3">
-        <div class="row align-items-start">
-            <input type="hidden" name="id" value="{{funcionario.id}}" />
-            <div class="col-md-6">
-                <label for="nome" class="form-label">Nome:</label>
-                <input type="text" name="nome" value="{{funcionario.nome}}" class="form-control" />
+<div class="signup-form">
+  <form action="/clientes/edit" method="post">
+    <p>Preencha o formulário para editar o Cliente {{funcionario.nome}}</p>
+    <hr>
+    <input type="hidden" name="id" value="{{funcionario.id}}" />
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <span class="fa fa-paw"></span>
+          </span>
+        </div>
+        <input type="text" class="form-control" name="nome" value="{{funcionario.nome}}" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-star"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" name="sobrenome" value="{{funcionario.sobrenome}}" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-calendar"></i>
+          </span>
+        </div>
+        <input type="date" class="form-control" name="data_nascimento" value="{{funcionario.data_nascimento}}" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-pencil"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" name="cpf" value="{{funcionario.cpf}}" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">
+                <i class="fa fa-star"></i>
+            </span>
             </div>
+            <input type="text" class="form-control" name="funcao" value="{{funcionario.funcao}}" required="required">
         </div>
-
-        <div class="row align-items-start">
-            <div class="col-md-4">
-                <label for="sobrenome" class="form-label">Sobrenome:</label>
-                <input type="text" name="sobrenome" value="{{funcionario.sobrenome}}" class="form-control" />
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">
+                <i class="fa fa-star"></i>
+            </span>
             </div>
+            <input type="text" class="form-control" name="login" value="{{funcionario.login}}" required="required">
         </div>
-        
-        <div class="row align-items-start">
-            <div class="col-md-4">
-                <label for="dataNascimento" class="form-label">Data de Nascimento:</label>
-                <input type="date" name="dataNascimento" value="{{funcionario.data_nascimento}}" class="form-control" />
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">
+                <i class="fa fa-star"></i>
+            </span>
             </div>
+            <input type="text" class="form-control" name="senha" value="{{funcionario.senha}}" required="required">
         </div>
-
-        <div class="row align-items-start">
-            <div class="col-md-4">
-                <label for="cpf" class="form-label">CPF:</label>
-                <input type="text" name="cpf" value="{{funcionario.cpf}}" class="form-control" />
-            </div>
-        </div>
-        
-        <div class="row align-items-start">
-            <div class="col-md-4">
-                <label for="funcao" class="form-label">Função:</label>
-                <input type="text" name="funcao" value="{{funcionario.funcao}}" class="form-control" />
-            </div>
-        </div>
-
-        <div class="row align-items-start">
-            <div class="col-md-4">
-                <label for="login" class="form-label">Login:</label>
-                <input type="text" name="login" value="{{funcionario.login}}" class="form-control" />
-            </div>
-        </div>
-
-        <div class="row align-items-start">
-            <div class="col-md-4">
-                <label for="senha" class="form-label">Senha:</label>
-                <input type="text" name="senha" value="{{funcionario.senha}}" class="form-control" />
-            </div>
-        </div>
-
-        <div class="col-sm-2">
-            <input type="submit" value="Atualizar" />
-        </div>
-    </form>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn-form text-center btn-primary btn-lg">Atualizar</button>
+    </div>
+  </form>
 </div>   
