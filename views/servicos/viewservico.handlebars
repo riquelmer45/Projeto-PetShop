@@ -22,7 +22,13 @@
               {{#each listaServico as | servico |}}
                 <div class="col-sm-3">
                   <div class="thumb-wrapper">
-                    
+                    <span class="wish-icon">
+                      <a href="/servicos/edit/{{servico.id}}">{{> edit}}</a></td>
+                      <button type="button" style="border: none !important; background-color: transparent !important;" 
+                        onclick="deleteModal({{servico.id}})">
+                        {{> del}}
+                      </button>
+                    </span>
                     <div class="img-box">
                       <img src="{{servico.srcFoto}}" class="img-fluid" alt="{{servico.titulo}}">
                     </div>

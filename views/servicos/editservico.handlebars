@@ -1,0 +1,92 @@
+<div class=" text-center header">
+  <h1 class="text-center header-text">Editar Dados de Serviço</h1>
+</div>
+
+<div class="signup-form">
+  <form action="/servicos/edit" method="post">
+    <p>Preencha o formulário para editar o Serviço</p>
+    <hr>
+    <input type="hidden" name="id" value="{{servico.id}}" />
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <span class="fa fa-user"></span>
+          </span>
+        </div>
+        <input type="text" class="form-control" name="titulo" value="{{servico.titulo}}" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-user"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" name="srcFoto" value="{{servico.srcFoto}}" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-money"></i>
+          </span>
+        </div>
+        <input type="number" class="form-control" name="preco" value="{{servico.preco}}" required="required">
+      </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    {{#if servico.possuiDesconto}}
+                        <i id="isPromotion" class="fa fa-toggle-on"></i>
+                    {{else}}
+                        <i id="isPromotion" class="fa fa-toggle-off"></i>
+                    {{/if}}
+                </span>
+            </div>
+            <select id="select-promotion" class="form-control" name="possuiDesconto" 
+            onchange="changePromotion()" required="required">
+                {{#if servico.possuiDesconto}}
+                    <option value="false">Sem Promoção</option>
+                    <option value="true" selected>Com Promoção</option>
+                {{else}}
+                    <option value="false" selected>Sem Promoção</option>
+                    <option value="true">Com Promoção</option>
+                {{/if}}
+            </select>
+        </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="fa fa-money"></i>
+                    </span>
+                </div>
+                <input type="number" class="form-control" name="precoPromocional" placeholder="Preço Promocionado" value="{{servico.precoPromocional}}" required="required">
+            </div>
+        </div>
+    <div class="form-group">
+      <button type="submit" class="btn-form text-center btn-primary btn-lg">Atualizar</button>
+    </div>
+  </form>
+</div>
+
+<script>
+    function changePromotion(){
+        let el = document.getElementById('isPromotion')
+        let status = document.getElementById('select-promotion').value
+
+        if(el.classList.contains('fa-toggle-off') && status == 'true'){
+            el.classList.remove('fa-toggle-off')
+            el.classList.add('fa-toggle-on')
+        }else if(el.classList.contains('fa-toggle-on') && status == 'false'){
+            el.classList.remove('fa-toggle-on')
+            el.classList.add('fa-toggle-off')
+        }
+    }
+</script>
