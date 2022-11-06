@@ -28,6 +28,7 @@ module.exports = class controller {
             if(!funcionario){
                 req.flash('massage', 'Funcionario não cadastrado')
                 res.render('funcionarios/funcionarioform')
+                return;
             }
             //descomentar este if para caso n tenha funcionarios cadastrados com codificação de senha e comentar o seguinte
             // if(!senha === funcionario.senha){
@@ -41,7 +42,7 @@ module.exports = class controller {
                 return
             }
             req.session.userid = funcionario.id
-            req.flash('massage', 'Funcionario logado com sucesso!')
+            req.flash('massage', 'Funcionário logado com sucesso!')
             req.session.save(()=>{
                 res.redirect('/')
             })
