@@ -25,12 +25,12 @@
         <td>{{this.data_nascimento}}</td>
         <td>{{this.funcao}}</td>
         <td>{{this.login}}</td>
-        <td><a href="/funcionarios/edit/{{this.id}}">{{> edit_funcionario}}</a></td>
+        <td><a href="/funcionarios/edit/{{this.id}}">{{> edit}}</a></td>
         <td>
           <form action="/funcionarios/remove" method="post">
             <input type="hidden" name="id" value="{{this.id}}">
-            <button type="submit">
-              {{> del_funcionario}}
+            <button type="submit" style="border: none !important; background-color: transparent !important;" >
+              {{> del}}
             </button>
           </form>
         </td>
