@@ -6,7 +6,6 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
         <th scope="col">Nome</th>
         <th scope="col">Sobrenome</th>
         <th scope="col">Data de Nascimento</th>
@@ -19,8 +18,7 @@
     {{#each funcionarios}}
     <tbody>
       <tr>
-        <th scope="row">{{this.id}}</th>
-        <td class="col-4 ">{{this.nome}}</td>
+        <td class="col-2 ">{{this.nome}}</td>
         <td class="col-3">{{this.sobrenome}}</td>
         <td>{{this.data_nascimento}}</td>
         <td>{{this.funcao}}</td>

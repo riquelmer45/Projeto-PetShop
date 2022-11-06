@@ -1,174 +1,71 @@
+<script>
+  function deleteModal(servicoId){
+    let campoId = document.getElementById("servicoId");
+    campoId.value = servicoId;
+    $("#deleteModal").modal("show");
+  }
+
+  function ocultaModa(){
+    $("#deleteModal").modal("hide");
+  }
+</script>
+
 <div class="produtos espaco">
   <div class="row">
     <div class="col-md-12">
       <h2 class="linhadois text-center text-white">Nossos Serviços</h2>
       <div id="myCarousel" class="horizontal carousel slide espaco-margin" data-ride="carousel" data-interval="0">
-        <!-- Carousel indicators -->
-        <ol class="carousel-indicators espaco-margin">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
         <!-- Wrapper for carousel items -->
         <div class="carousel-inner">
-          <div class="row my-2">
-              <div class="col-sm-3">
-                <div class="thumb-wrapper">
-                  
-                  <div class="img-box">
-                    <img src="./imgs/tosa.jpeg" class="img-fluid" alt="Tosa">
-                  </div>
-                  <div class="thumb-content">
-                    <h4>Tosa</h4>
-                    <p class="item-price"><strike>R$70.00</strike> <b>R$50.00</b></p>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="col-sm-3">
-                <div class="thumb-wrapper">
-                  
-                  <div class="img-box">
-                    <img src="./imgs/banhocao.jpg" class="img-fluid" alt="Banho para cão grande">
-                  </div>
-                  <div class="thumb-content">
-                    <h4>Banho - Raça grande</h4>
-                    <p class="item-price"><strike>R$100.00</strike> <b>R$80.00</b></p>
+          {{#each servicos as | listaServico |}}
+            <div class="row my-2">
+              {{#each listaServico as | servico |}}
+                <div class="col-sm-3">
+                  <div class="thumb-wrapper">
+                    
+                    <div class="img-box">
+                      <img src="{{servico.srcFoto}}" class="img-fluid" alt="{{servico.titulo}}">
+                    </div>
+                    <div class="thumb-content">
+                      <h4>{{servico.titulo}}</h4>
+                      <p class="item-price">
+                        {{#if servico.possuiDesconto}}
+                          <strike>R${{servico.preco}}</strike> <b>R${{servico.precoPromocional}}</b>
+                        {{else}}
+                          <b>R${{servico.preco}}</b>
+                        {{/if}}
+                        </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-
-              <div class="col-sm-3">
-                <div class="thumb-wrapper">
-                  
-                  <div class="img-box">
-                    <img src=".\imgs\racamediabanho.jpg" class="img-fluid" alt="Banho para cão médio">
-                  </div>
-                  <div class="thumb-content">
-                    <h4>Banho - Raça Média</h4>
-                    <p class="item-price"><strike>R$90.00</strike> <b>R$60.00</b></p>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="col-sm-3">
-                <div class="thumb-wrapper">
-                  
-                  <div class="img-box">
-                    <img src=".\imgs\banhocaopequeno.jpg" class="img-fluid" alt="Banho para cão pequeno">
-                  </div>
-                  <div class="thumb-content">
-                    <h4>Banho - Raça Pqn</h4>
-                    <p class="item-price"><strike>R$80.00</strike> <b>R$50.00</b></p>
-                  </div>
-                </div>
-              </div>
+              {{/each}}
             </div>
-          <div class="row my-2">
-              <div class="col-sm-3">
-                <div class="thumb-wrapper">
-                  
-                  <div class="img-box">
-                    <img src="./imgs/vacinas.jpg" class="img-fluid" alt="Vacina">
-                  </div>
-                  <div class="thumb-content">
-                    <h4>Vacina para raiva</h4>
-                    <p class="item-price"><strike>R$80.00</strike> <span>R$60.00</span></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="thumb-wrapper">
-                  
-                  <div class="img-box">
-                    <img src="./imgs/nutricionista.png" class="img-fluid" alt="Nutricionista">
-                  </div>
-                  <div class="thumb-content">
-                    <h4>Nutricionista Pet</h4>
-                    <p class="item-price"><strike>R$450.00</strike> <span>R$350.00</span></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="thumb-wrapper">
-                  
-                  <div class="img-box">
-                    <img src="./imgs/castracao.jpeg" class="img-fluid" alt="Psicologa">
-                  </div>
-                  <div class="thumb-content">
-                    <h4>Psicóloga Pet</h4>
-                    <p class="item-price"><strike>R$350.00</strike> <span>R$250.00</span></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="thumb-wrapper">
-                  
-                  <div class="img-box">
-                    <img src="./imgs/vermifugo.jpg" class="img-fluid" alt="Vermifugo">
-                  </div>
-                  <div class="thumb-content">
-                    <h4>Vermífugo</h4>
-                    <p class="item-price"><strike>R$40.00</strike> <span>R$20.00</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <div class="row my-2">
-              <div class="col-sm-3">
-                <div class="thumb-wrapper">
-                  
-                  <div class="img-box">
-                    <img src="./imgs/banhogato.jpg" class="img-fluid" alt="Banho em Gato">
-                  </div>
-                  <div class="thumb-content">
-                    <h4>Banho - Gato</h4>
-                    <p class="item-price"><strike>R$50.00</strike> <span>R$40.00</span></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="thumb-wrapper">
-                  
-                  <div class="img-box">
-                    <img src="./imgs/treinocao.jpg" class="img-fluid" alt="Adestrar - Cão">
-                  </div>
-                  <div class="thumb-content">
-                    <h4>Adestrar - Cão</h4>
-                    <p class="item-price"><strike>R$1500.00</strike> <span>R$1000.00</span></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="thumb-wrapper">
-                  
-                  <div class="img-box">
-                    <img src="./imgs/treinogato.jpg" class="img-fluid" alt="Adestrar - Gato">
-                  </div>
-                  <div class="thumb-content">
-                    <h4>Adestrar - Gato</h4>
-                    <p class="item-price"><strike>R$1100.00</strike> <span>R$900.00</span></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="thumb-wrapper">
-                  
-                  <div class="img-box">
-                    <img src="./imgs/pethotel.jpg" class="img-fluid" alt="Pet Hotel">
-                  </div>
-                  <div class="thumb-content">
-                    <h4>Pet Hotel - Diária</h4>
-                    <p class="item-price"><strike>R$100.00</strike> <span>R$90.00</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          {{/each}}
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<form action="/servicos/remove" method="post">
+  <input type="hidden" name="id" id="servicoId">
+  <div class="modal fade" tabindex="-1" role="dialog" id="deleteModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Atenção</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="ocultaModa()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Deseja realmente excluir esse serviço?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Sim, eu tenho!</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="ocultaModa()">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

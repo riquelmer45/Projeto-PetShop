@@ -29,7 +29,18 @@ module.exports = class ServicoController {
   }
 
   static async allServicos(req, res) {
-    const servicos = await Servico.findAll({ raw: true })
+    const servs = await Servico.findAll({ raw: true })
+    let servicos = []
+    for(let i=0;i < servs.length;){
+      let lista = []
+
+      if(i < servs.length) lista.push(servs[i++])
+      if(i < servs.length) lista.push(servs[i++])
+      if(i < servs.length) lista.push(servs[i++])
+      if(i < servs.length) lista.push(servs[i++])
+
+      servicos.push(lista)
+    }
     res.render('servicos/viewservico', { servicos })
   }
 
