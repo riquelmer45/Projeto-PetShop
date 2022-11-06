@@ -14,8 +14,8 @@ module.exports = class ServicoController {
       titulo: req.body.titulo,
       srcFoto: req.body.srcFoto,
       preco: req.body.preco,
-      precoPromocional: req.body.precoPromocional == 'true' ? true : false,
-      possuiDesconto: req.body.possuiDesconto
+      precoPromocional: req.body.precoPromocional,
+      possuiDesconto: req.body.possuiDesconto == 'true' ? true : false
     }
 
     await Servico.create(servico)
@@ -46,8 +46,8 @@ module.exports = class ServicoController {
         titulo: req.body.titulo,
         srcFoto: req.body.srcFoto,
         preco: req.body.preco,
-        precoPromocional: req.body.precoPromocional == 'true' ? true : false,
-        possuiDesconto: req.body.possuiDesconto
+        precoPromocional: req.body.precoPromocional,
+        possuiDesconto: req.body.possuiDesconto == 'true' ? true : false
     }
 
     await Servico.update(servico, { where: { id: id } })
