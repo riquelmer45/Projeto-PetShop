@@ -18,7 +18,7 @@
         <!-- Wrapper for carousel items -->
         <div class="carousel-inner">
           {{#each servicos as | listaServico |}}
-            <div class="row my-2">
+            <div class="row my-4">
               {{#each listaServico as | servico |}}
                 <div class="col-sm-3">
                   <div class="thumb-wrapper">
@@ -30,7 +30,7 @@
                       </button>
                     </span>
                     <div class="img-box">
-                      <img src="{{servico.srcFoto}}" class="img-fluid" alt="{{servico.titulo}}">
+                      <img src="{{servico.srcFoto}}" style="width: 120px !important; height: 120px;" class="img-fluid" alt="{{servico.titulo}}">
                     </div>
                     <div class="thumb-content">
                       <h4>{{servico.titulo}}</h4>
