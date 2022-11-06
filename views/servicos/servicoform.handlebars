@@ -1,0 +1,82 @@
+<div class=" text-center header">
+    <h1 class="text-center header-text">Cadastrar um Serviço</h1>
+</div>
+
+
+<div class="signup-form">
+    <form action="/servicos/add" method="post">
+        <p>Preencha o formulário para cadastrar um Serviço</p>
+        <hr>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <span class="fa fa-user"></span>
+                    </span>
+                </div>
+                <input type="text" class="form-control" name="titulo" placeholder="Título" required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="fa fa-user"></i>
+                    </span>
+                </div>
+                <input type="text" class="form-control" name="srcFoto" placeholder="URL da imagem de Serviço" required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="fa fa-money"></i>
+                    </span>
+                </div>
+                <input type="number" class="form-control" name="preco" placeholder="Preço Completo" required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i id="isPromotion" class="fa fa-toggle-off"></i>
+                    </span>
+                </div>
+                <select id="select-promotion" class="form-control" name="possuiDesconto" onchange="changePromotion()" required="required">
+                    <option value="false" selected>Sem Promoção</option>
+                    <option value="true">Com Promoção</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="fa fa-money"></i>
+                    </span>
+                </div>
+                <input type="number" class="form-control" name="precoPromocional" placeholder="Preço Promocionado" required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn-form text-center btn-primary btn-lg">Cadastrar</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function changePromotion(){
+        let el = document.getElementById('isPromotion')
+        let status = document.getElementById('select-promotion').value
+
+        if(el.classList.contains('fa-toggle-off') && status == 'true'){
+            el.classList.remove('fa-toggle-off')
+            el.classList.add('fa-toggle-on')
+        }else if(el.classList.contains('fa-toggle-on') && status == 'false'){
+            el.classList.remove('fa-toggle-on')
+            el.classList.add('fa-toggle-off')
+        }
+    }
+</script>

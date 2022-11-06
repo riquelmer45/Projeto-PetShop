@@ -71,8 +71,15 @@
                                     <li><a class="dropdown-item" href="/funcionarios/allFuncionario">Listar Funcionarios</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/">Lista de Serviços</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Serviços
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/servicos/add">Cadastrar um Serviço</a></li>
+                                    <li><a class="dropdown-item" href="/servicos/allServicos">Listar os Serviços</a></li>
+                                </ul>
                             </li>
                             <a class="btn btn-light" href="/petshop/logout">Logout</a>
                         {{else}}
@@ -157,7 +164,7 @@
 
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <a href="/funcionarios/add" class="link-footer">Adicionar Funcionário</a>
+                            <a href="/funcionarios/add" class="link-footer">Cadastrar Funcionário</a>
                         </li>
                         <li>
                             <a href="#" class="link-footer">Listar Funcionário</a>

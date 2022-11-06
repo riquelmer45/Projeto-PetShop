@@ -6,13 +6,15 @@ const petshop = require('./routes/router')
 const Pet = require('./routes/petRouter')
 const Cliente = require('./routes/clienteRouter')
 const Funcionario = require('./routes/funcionarioRouter')
+const Servico = require('./routes/servicoRouter')
 const conn = require('./db/conn')
 const flash = require('express-flash')
 const session = require('express-session')
 , Filestore = require('session-file-store')(session);
 const petModel = require('./model/Pets')
 const clienteModel = require('./model/Cliente')
-const funcionarioRouter = require('./model/Funcionario')
+const funcionarioModel = require('./model/Funcionario')
+const servicoModel = require('./model/Servico')
 const Cookie = require('express-session')
 
 const hbs = exphbs.create({
@@ -73,6 +75,8 @@ app.use('/pets', Pet)
 app.use('/clientes', Cliente)
 //adcionando a rota Funcionario
 app.use('/funcionarios', Funcionario)
+//adicionando a rota de Serviço
+app.use('/servicos', Servico)
 
 app.get('/', (req, res) => {
   res.render('petshop/home')
