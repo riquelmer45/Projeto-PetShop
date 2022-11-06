@@ -11,7 +11,7 @@
                             <i class="fa fa-id-card"></i>
                         </span>
                     </div>
-                    <input type="text" class="form-control" name="login" placeholder="Login" required="required">
+                    <input type="text" class="form-control" name="login" placeholder="Login" required="required"> 
                 </div>
             </div>
             <div class="form-group">
@@ -24,9 +24,17 @@
                     <input type="password" class="form-control" name="senha" placeholder="Senha" required="required">
                 </div>
             </div>
+            {{#if message}}
+                <div class="form-group" style="width: {{message.width}};">
+                    <div class="alert alert-danger" role="alert">
+                        {{message.descricao}}
+                    </div>
+                </div>
+            {{/if}}
             <div class="form-group">
                 <button type="submit" class="btn-form text-center btn-primary btn-lg">Login</button>
             </div> 
         </form>
     </div>
 </div>
+

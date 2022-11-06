@@ -24,21 +24,26 @@ module.exports = class controller {
             const funcionario = await Funcionario.findOne({
                 where: { login: login }
             })
-            const validSenha = await bcrypt.compare(senha, funcionario.senha)//comentar esse trecho para caso n tenha senha incriptas
-            if(!funcionario){
+
+            if(funcionario == null){
                 req.flash('massage', 'Funcionario não cadastrado')
-                res.render('funcionarios/funcionarioform')
+                let message = {
+                    width: '260px',
+                    descricao: 'Funcionario não cadastrado'
+                }
+                res.render('petshop/login', {message})
                 return;
             }
-            //descomentar este if para caso n tenha funcionarios cadastrados com codificação de senha e comentar o seguinte
-            // if(!senha === funcionario.senha){
-            //     req.flash('massage', 'Senha Inválida')
-            //     res.render('funcionario/funcionarioform')
-            //     return
-            // }
+
+            const validSenha = await bcrypt.compare(senha, funcionario.senha)//comentar esse trecho para caso n tenha senha incriptas
+
             if(!validSenha){
                 req.flash('massage', 'Senha Inválida')
-                res.render('funcionarios/funcionarioform')
+                let message = {
+                    width: '160px',
+                    descricao: 'Senha Inválida'
+                }
+                res.render('petshop/login', {message})
                 return
             }
             req.session.userid = funcionario.id
